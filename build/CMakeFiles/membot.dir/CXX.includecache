@@ -84,11 +84,23 @@ string
 chatgui.h
 /home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/chatgui.h
 
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphedge.cpp
+graphnode.h
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphnode.h
+graphedge.h
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphedge.h
+
 /home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphedge.h
 vector
 -
 string
 -
+
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphnode.cpp
+graphedge.h
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphedge.h
+graphnode.h
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphnode.h
 
 /home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphnode.h
 vector
