@@ -28,6 +28,7 @@ ChatBot::ChatBot(std::string filename)
 
     // load image into heap memory
     _image = new wxBitmap(filename, wxBITMAP_TYPE_PNG);
+
 }
 
 ChatBot::~ChatBot()
@@ -36,7 +37,8 @@ ChatBot::~ChatBot()
 
     // deallocate heap memory
     if(_image != NULL) // Attention: wxWidgets used NULL and not nullptr
-    {
+    {       
+        //std::cout << "before delete" << std::endl;
         delete _image;
         _image = NULL;
     }
