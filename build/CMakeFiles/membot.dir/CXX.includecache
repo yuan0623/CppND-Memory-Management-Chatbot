@@ -30,22 +30,6 @@ wx/bitmap.h
 string
 -
 
-/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/chatgui.cpp
-wx/filename.h
--
-wx/colour.h
--
-wx/image.h
--
-string
--
-chatbot.h
-/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/chatbot.h
-chatlogic.h
-/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/chatlogic.h
-chatgui.h
-/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/chatgui.h
-
 /home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/chatgui.h
 memory
 -
@@ -84,11 +68,23 @@ string
 chatgui.h
 /home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/chatgui.h
 
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphedge.cpp
+graphnode.h
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphnode.h
+graphedge.h
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphedge.h
+
 /home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphedge.h
 vector
 -
 string
 -
+
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphnode.cpp
+graphedge.h
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphedge.h
+graphnode.h
+/home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphnode.h
 
 /home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/graphnode.h
 vector
@@ -97,6 +93,8 @@ string
 -
 chatbot.h
 /home/yuan/Dropbox/Udacity_ND/Cpp/CppND-Memory-Management-Chatbot/src/chatbot.h
+memory
+-
 
 /usr/include/wx-3.0/wx/accel.h
 wx/defs.h
