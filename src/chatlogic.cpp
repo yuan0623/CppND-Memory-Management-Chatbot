@@ -33,7 +33,7 @@ ChatLogic::~ChatLogic()
     ////
 
     // delete chatbot instance
-    delete _chatBot;
+    //delete _chatBot;
 
     // delete all nodes
     /*
@@ -166,20 +166,24 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
                             //GraphEdge *edge = new GraphEdge(id);
                             std::unique_ptr<GraphEdge> edge = std::make_unique<GraphEdge>(id);
                             //edge->SetChildNode(*(childNode).get());
-                            //edge->SetChildNode((*childNode).get());
-                            (*edge).SetChildNode((*childNode).get());
-                            //edge->SetParentNode(*(parentNode));
-                            //edge->SetChildNode((*parentNode).get());
-                            (*edge).SetParentNode((*parentNode).get());
+                            edge->SetChildNode(childNode->get());
+
+                            edge->SetParentNode(parentNode->get());
+                            //(*edge).SetParentNode((*parentNode).get());
                             //_edges.push_back(edge);
-                            _edges.push_back(std::make_unique<GraphEdge>(id));
+                            
 
                             // find all keywords for current node
                             AddAllTokensToElement("KEYWORD", tokens, *edge);
 
                             // store reference in child node and parent node
                             (*childNode)->AddEdgeToParentNode(edge.get());
-                            (*parentNode)->AddEdgeToChildNode(edge.get());
+                            //(*parentNode)->AddEdgeToChildNode(std::move(edge));
+                            (*parentNode)->AddEdgeToChildNode(std::move(edge));
+                            //childNode->AddEdgeToParentNode(edge.get());
+                            //parentNode->AddEdgeToChildNode(edge.get());
+                            
+                            //_edges.push_back(std::move(edge));
                         }
 
                         ////

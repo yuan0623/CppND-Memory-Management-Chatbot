@@ -40,7 +40,8 @@ ChatBot::~ChatBot()
     {       
         //std::cout << "before delete" << std::endl;
         delete _image;
-        _image = NULL;
+        //_image = NULL;
+        //_image = nullptr;
         _chatLogic = nullptr;
         _rootNode = nullptr;
         
@@ -58,10 +59,10 @@ ChatBot::ChatBot(ChatBot &source)   // copy constructor
     
     // my previous implementation
     _chatLogic = source._chatLogic;
-   _rootNode = source._rootNode;
-   //_image = source._image;
-   _image = new wxBitmap();
-   *_image = *source._image;
+    _rootNode = source._rootNode;
+    //_image = source._image;
+    _image = new wxBitmap();
+    *_image = *source._image;
     
    /*
    _chatLogic = source._chatLogic;
@@ -98,14 +99,17 @@ ChatBot &ChatBot::operator = (ChatBot &source)   // copy assignment operator
 }
 
 ChatBot::ChatBot(ChatBot &&source) //move constructor
-{
+{   
+    
     std::cout << "Chatbot Move Constructor" << std::endl;
     _chatLogic = source._chatLogic;
+    // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
+    _chatLogic->SetChatbotHandle(this);
     _rootNode = source._rootNode;
     _currentNode = source._currentNode;
     _image = source._image;
-    _chatLogic->SetChatbotHandle(this);
-
+    
+    // clear the source resource
     source._image = NULL;
     source._currentNode = nullptr;
     source._rootNode = nullptr;
@@ -121,11 +125,13 @@ ChatBot &ChatBot::operator = (ChatBot &&source)
         return *this;
     }
     _chatLogic = source._chatLogic;
+    // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
+    _chatLogic->SetChatbotHandle(this);
     _rootNode = source._rootNode;
     _currentNode = source._currentNode;
     _image = source._image;
-    _chatLogic->SetChatbotHandle(this);
-
+    
+    // clear the source resource
     source._image = NULL;
     source._currentNode = nullptr;
     source._rootNode = nullptr;
