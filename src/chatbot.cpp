@@ -59,6 +59,7 @@ ChatBot::ChatBot(ChatBot &source)   // copy constructor
     
     // my previous implementation
     _chatLogic = source._chatLogic;
+    _chatLogic->SetChatbotHandle(this);
     _rootNode = source._rootNode;
     //_image = source._image;
     _image = new wxBitmap();
@@ -85,6 +86,7 @@ ChatBot &ChatBot::operator = (ChatBot &source)   // copy assignment operator
     _image = new wxBitmap();
     *_image = *source._image;
     _chatLogic = source._chatLogic;
+    _chatLogic->SetChatbotHandle(this);
     _rootNode = source._rootNode;
     return *this;
    /*
